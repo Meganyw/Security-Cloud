@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>西部云基地</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link rel="stylesheet" type="text/css" href="plugins/css/font-awesome.min.css" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+</head>
+<body>
+    <div class="container"></div>
+    <div class="content">
+        <div class="login">
+            <!-- <div class="logo"></div> -->
+            <p class="title">YD-SaaS安全云平台</p>
+            <p class="title2">没有网络安全就没有国家安全</p>
+            <div class="inputs">
+                <input type="text" name="" id="" class="username editInput" placeholder="用户名" />
+                <input type="text" name="" id="" class="editInput" placeholder="密码"/>
+                <input type="text" name="" id="" class="editInput" placeholder="验证码"/>
+                <img src="css/images/logo.png" alt="" class="checkImg"/>
+                <button class="submitButton">登&nbsp;录</button>
+            </div>
+            <div class="registeDiv">
+                <p>还没有账户？<a class="registeButton">立即注册</a></p>
+            </div>
+        </div>
+        <div class="registe" style="display: none;">
+            <p class="title">企业注册</p>
+            <div class="unit underlineInput">
+                <span class="name">单位全称</span>
+                <input type="text" class="" placeholder="请输入与单位证照资料一致的单位全称，2-64个中文" />
+            </div>
+            <div class="unit underlineInput">
+                <span class="name">机构代码</span>
+                <input type="text" class="" placeholder="组织机构统一代码（行政机构代码）" />
+            </div>
+            <div class="underlineInput">
+                <div class="province">
+                    <span>请选择</span>
+                    <select name="" id="" class="select">
+                        <option value="">河北省</option>
+                        <option value="">河南省</option>
+                    </select>
+                    <span class="unit">省</span>
+                </div>
+                <div class="city">
+                    <span>请选择</span>
+                    <select name="" id="" class="select">
+                        <option value="">张家口市</option>
+                        <option value="">邯郸市</option>
+                    </select>
+                    <span class="unit">市</span>
+                </div>
+            </div>
+            <div class="underlineInput">
+                <span class="name">用户名</span>
+                <input type="text" class="" placeholder="首字符必须为大写或数字，长度6到24个字符" />
+            </div>
+            <div class="underlineInput passwordInput">
+                <span class="name">密码</span>
+                <input type="text" class="" placeholder="8-20位字母和数字组成，不能与用户名相同" />
+                <i class="fa fa-eye-slash"></i>
+            </div>
+            <div class="underlineInput passwordInput">
+                <span class="name">确认密码</span>
+                <input type="text" class="" placeholder="8-20位字母和数字组成，不能与用户名相同" />
+                <i class="fa fa-eye-slash"></i>
+            </div>
+            <div class="underlineInput">
+                <span class="name">电子邮箱</span>
+                <input type="text" class="" placeholder="请输入电子邮箱，邮箱为找回密码之用" />
+            </div>
+            <div class="underlineInput">
+                <span class="name">手机号</span>
+                <input type="text" class="" placeholder="请输入手机号" />
+            </div>
+            <div class="underlineInput">
+                <span class="name">联系人</span>
+                <input type="text" class="" placeholder="请输入联系人，可由中文或英文组成" />
+            </div>
+            <button class="registeSubmit">立即注册</button>
+            <div class="loginDiv">
+                <p>已有账号？<a class="loginButton">去登录</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

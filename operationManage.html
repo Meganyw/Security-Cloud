@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>运维订单-费用页面</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="plugins/layui/css/layui.css" />
+    <link rel="stylesheet" type="text/css" href="plugins/easyui/css/easyui.css" />
+    <link rel="stylesheet" type="text/css" href="plugins/css/font-awesome.min.css" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="plugins/easyui/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="plugins/easyui/easyui-lang-zh_CN.js"></script>
+
+</head>
+<body>
+    <div class="layui-layout layui-layout-admin">
+        <div class="layui-header">
+            <div class="layui-logo">
+                <span class="logo"></span>
+            </div>
+            <ul class="layui-nav layui-layout-left">
+                <li class="layui-nav-item"><a href="javascript:;" style="font-size:26px;color:#fff;">YD-SaaS安全云平台</a></li>
+            </ul>
+            <ul class="layui-nav layui-layout-right">
+                <li class="layui-nav-item"><a href="${pageContext.request.contextPath}/user/toUserIndex"><i class="fa fa-home fa-fw"></i>返回首页</a></li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;"><i class="fa fa-user-o fa-fw"></i>111111</a>
+                    <dl class="layui-nav-child">
+                        <span><a href="javascript:;" onclick="change()"><i class="fa fa-unlock"></i>修改密码</a></span>
+                    </dl>
+                </li>
+                <li class="layui-nav-item"><a href="${pageContext.request.contextPath}/sec/logout"><i class="fa fa-sign-out"></i>安全退出</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container operationManage">
+        <div class="layui-tab layui-tab-card">
+            <ul class="layui-tab-title">
+                <li class="layui-this">订单信息</li>
+                <li>编辑模块费用</li>
+            </ul>
+            <div class="layui-tab-content">
+                <div class="layui-tab-item layui-show">
+                    <form class="layui-form layui-form-pane layui-search" action="">
+                        <div class="layui-form-item">
+                            <div class="layui-inline">
+                                <label class="layui-form-label">单位名称</label>
+                                <div class="layui-input-inline">
+                                  <input type="text" name="unitName"  class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <label class="layui-form-label">联系人</label>
+                                <div class="layui-input-inline">
+                                    <input type="text"  class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <label class="layui-form-label">订单状态</label>
+                                <div class="layui-input-inline">
+                                  <select name="quiz1">
+                                        <option value="">请选择</option>
+                                        <option value="提交" selected="">待审核</option>
+                                        <option value="启用">已启用</option>
+                                  </select>
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <button class="layui-btn layui-btn-normal">查询</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="orderInfo">
+                        <table id="orderTable"></table>
+                    </div>
+                    <!-- 修改订单状态按钮 -->
+                    <button class="layui-btn layui-btn-normal" id="changeStatus">修改订单状态</button>
+                </div>
+                <div class="layui-tab-item">
+                    <table class="editOrder">
+                        <tbody>
+                            <tr>
+                                <td>可视化态势感知</td>
+                                <td>月单价：<input type="text" />元</td>
+                                <td>1~3年：<input type="text" />折</td>
+                                <td>3~5年：<input type="text" />折</td>
+                                <td>5年以上：<input type="text" />折</td>
+                            </tr>
+                            <tr>
+                                <td>云网站安全监测</td>
+                                <td>月单价：<input type="text" />元</td>
+                                <td>1~3年：<input type="text" />折</td>
+                                <td>3~5年：<input type="text" />折</td>
+                                <td>5年以上：<input type="text" />折</td>
+                            </tr>
+                            <tr>
+                                <td>云等保监测自评估</td>
+                                <td>月单价：<input type="text" />元</td>
+                                <td>1~3年：<input type="text" />折</td>
+                                <td>3~5年：<input type="text" />折</td>
+                                <td>5年以上：<input type="text" />折</td>
+                            </tr>
+                            <tr>
+                                <td>互联网资产暴露安全监测</td>
+                                <td>月单价：<input type="text" />元</td>
+                                <td>1~3年：<input type="text" />折</td>
+                                <td>3~5年：<input type="text" />折</td>
+                                <td>5年以上：<input type="text" />折</td>
+                            </tr>
+                            <tr>
+                                <td>云等保安全事件深度检测</td>
+                                <td>月单价：<input type="text" />元</td>
+                                <td>1~3年：<input type="text" />折</td>
+                                <td>3~5年：<input type="text" />折</td>
+                                <td>5年以上：<input type="text" />折</td>
+                            </tr>
+                            <tr>
+                                <td>云等保安全事件通报预警</td>
+                                <td>月单价：<input type="text" />元</td>
+                                <td>1~3年：<input type="text" />折</td>
+                                <td>3~5年：<input type="text" />折</td>
+                                <td>5年以上：<input type="text" />折</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="button">
+                        <button class="layui-btn layui-btn-normal change"><i class="layui-icon">&#xe642;</i>修改</button>
+                        <button class="layui-btn layui-btn-save save"><i class="fa fa-save fa-fw"></i>保存</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 修改订单状态的弹框 -->
+    <div class="changeStatus" style="display:none;padding:10px;">
+        <div class="layui-form status">
+            <div class="layui-form-item">
+                <label class="layui-form-label" style="width:85px;">选择付款状态</label>
+                <div class="layui-input-inline">
+                    <select name="" lay-filter="status">
+                        <option value="未付清">未付清</option>
+                        <option value="已付清">已付清</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="layui-form payTime">
+            <div class="layui-form-item">
+                <label class="layui-form-label" style="width:85px;">下次付款时间</label>
+                <div class="layui-input-inline">
+                    <input type="text" class="layui-input" id="test1" placeholder="yyyy-MM-dd">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id='changeId' style='width:350px;display: none;' >
+        <div style='width:320px;margin-left: 3%;margin-bottom:10px;margin-top:10px;'>
+            <p>请输入旧密码</p>
+            <input class='layui-input' id='oldPassword' type='password' name='oldPassword' value=''/>
+            <span id='oldInfo' style='color:red;'></span>
+        </div>
+        <div style='width:320px;margin-left: 3%;margin-bottom:10px;'>
+            <p>请输入新密码</p>
+            <input class='layui-input' id='newPassword' maxlength='12' minlength='6' type='password' name='newPassword' value=''/>
+            <span id='newPasswordInfo' style='color:red;'></span>
+        </div>
+        <div style='width:320px;margin-left: 3%;margin-bottom:10px;'>
+            <p>请再次输入新密码</p>
+            <input class='layui-input' id='secondPassword' maxlength='12' minlength='6' type='password' name='secondPassword' value=''/>
+            <span id='rePassword' style='color:red;'></span>
+        </div>
+    </div>
+    <script type="text/javascript" src="plugins/layui/layui.all.js"></script>
+    <script type="text/javascript" src="js/operationManage.js"></script>
+</body>
+</html>

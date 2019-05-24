@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>上传合同-下载购物单</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="plugins/layui/css/layui.css" />
+    <link rel="stylesheet" type="text/css" href="plugins/easyui/css/easyui.css" />
+    <link rel="stylesheet" type="text/css" href="plugins/css/font-awesome.min.css" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="plugins/easyui/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="plugins/easyui/easyui-lang-zh_CN.js"></script>
+    <script type="text/javascript" src="js/order.js"></script>
+</head>
+<body>
+    <div class="layui-layout layui-layout-admin">
+        <div class="layui-header">
+            <div class="layui-logo">
+                <span class="logo"></span>
+            </div>
+            <ul class="layui-nav layui-layout-left">
+                <li class="layui-nav-item"><a href="javascript:;" style="font-size:26px;color:#fff;">YD-SaaS安全云平台</a></li>
+            </ul>
+            <ul class="layui-nav layui-layout-right">
+                <li class="layui-nav-item"><a href="serviceIndex.html"><i class="fa fa-home fa-fw"></i>服务大厅</a></li>
+                <li class="layui-nav-item"><a href="userIndex.html"><i class="fa fa-th-large fa-fw"></i>服务平台</a></li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;"><i class="fa fa-user-o fa-fw"></i>111111</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;" onclick="common.changePassword()"><i class="fa fa-unlock"></i>修改密码</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item"><a href="${pageContext.request.contextPath}/sec/logout"><i class="fa fa-sign-out"></i>安全退出</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container orderView contract">
+        <div class="order">
+            <fieldset class="layui-elem-field">
+                <legend>下载购物清单-上传合同附件</legend>
+                <div class="layui-field-box">
+                    <table class="buyOrder">
+                        <thead>
+                            <tr>
+                                <th>提交时间</th>
+                                <th>订单号</th>
+                                <th>下载清单</th>
+                                <th>合同附件</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2018-0-12-22 12:09:09</td>
+                                <td>3458578234782349</td>
+                                <td>xxx <i class="fa fa-download upload"></i></td>
+                                <td><input type="file" /></td>
+                            </tr>
+                            <tr>
+                                <td>xxx.jpg</td>
+                                <td>xxx</td>
+                                <td>云态势感知模块清单名称 <i class="fa fa-download upload"></i></td>
+                                <td><input type="file" /></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="withoutOrder" >
+                        <p>暂无购物清单~</p>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+    <div id='changeId' style='width:350px;display: none;' >
+        <div style='width:320px;margin-left: 3%;margin-bottom:10px;margin-top:10px;'>
+            <p>请输入旧密码</p>
+            <input class='layui-input' id='oldPassword' type='password' name='oldPassword' value=''/>
+            <span id='oldInfo' style='color:red;'></span>
+        </div>
+        <div style='width:320px;margin-left: 3%;margin-bottom:10px;'>
+            <p>请输入新密码</p>
+            <input class='layui-input' id='newPassword' maxlength='12' minlength='6' type='password' name='newPassword' value=''/>
+            <span id='newPasswordInfo' style='color:red;'></span>
+        </div>
+        <div style='width:320px;margin-left: 3%;margin-bottom:10px;'>
+            <p>请再次输入新密码</p>
+            <input class='layui-input' id='secondPassword' maxlength='12' minlength='6' type='password' name='secondPassword' value=''/>
+            <span id='rePassword' style='color:red;'></span>
+        </div>
+    </div>
+    <script type="text/javascript" src="plugins/layui/layui.all.js"></script>
+</body>
+</html>

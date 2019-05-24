@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>查看订单详情</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="plugins/layui/css/layui.css" />
+    <link rel="stylesheet" type="text/css" href="plugins/easyui/css/easyui.css" />
+    <link rel="stylesheet" type="text/css" href="plugins/css/font-awesome.min.css" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="plugins/easyui/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="plugins/easyui/easyui-lang-zh_CN.js"></script>
+    <script type="text/javascript" src="js/orderView.js"></script>
+</head>
+<body>
+    <div class="layui-layout layui-layout-admin">
+        <div class="layui-header">
+            <div class="layui-logo">
+                <span class="logo"></span>
+            </div>
+            <ul class="layui-nav layui-layout-left">
+                <li class="layui-nav-item"><a href="javascript:;" style="font-size:26px;color:#fff;">YD-SaaS安全云平台</a></li>
+            </ul>
+            <ul class="layui-nav layui-layout-right">
+                <li class="layui-nav-item"><a href="serviceIndex.html"><i class="fa fa-home fa-fw"></i>服务大厅</a></li>
+                <li class="layui-nav-item"><a href="userIndex.html"><i class="fa fa-th-large fa-fw"></i>服务平台</a></li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;"><i class="fa fa-user-o fa-fw"></i>111111</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;" onclick="common.changePassword()"><i class="fa fa-unlock"></i>修改密码</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item"><a href="${pageContext.request.contextPath}/sec/logout"><i class="fa fa-sign-out"></i>安全退出</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container orderView">
+        <form class="layui-form selectSearch" action="">
+            <div class="layui-inline">
+                <div class="layui-input-inline">
+                    <select name="quiz1">
+                        <option value="0">全部订单</option>
+                        <option value="1" selected="">近3个月订单</option>
+                        <option value="2">近6个月订单</option>
+                        <option value="3">近一年订单</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-inline">
+                <div class="layui-input-inline">
+                    <select name="quiz1">
+                        <option value="全部订单状态">全部订单状态</option>
+                        <option value="待审核" selected="">待审核</option>
+                        <option value="已启动">已启动</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+        <div class="order">
+            <div class="withoutOrder" >
+                <p>暂无任何订单信息~</p>
+            </div>
+            <div class="layui-collapse" lay-filter="test">
+                <div class="layui-colla-item">
+                    <div class="layui-colla-title">
+                        <i class="fa fa-plus-circle"></i>
+                        <i class="fa fa-minus-circle"></i>
+                        <span>提交时间：<span class="time">2018-09-08 12:09:22</span></span>
+                        <span>订单号：<span class="number">876787987789</span></span>
+                        <span>提交人：<span class="name">王五五</span></span>
+                        <span>总金额：<span class="money">￥10800.00</span></span>
+                    </div>
+                    <i class="fa fa-trash-o delete"></i>
+                    <div class="layui-colla-content layui-show">
+                        <table class="buyOrder">
+                            <thead>
+                                <tr>
+                                    <th>购买模块</th>
+                                    <th>购买周期</th>
+                                    <th>单价</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>可视化态势态势感知</td>
+                                    <td>2018-03-09~2018-09-09</td>
+                                    <td>￥1080</td>
+                                </tr>
+                                <tr>
+                                    <td>云等保检测自评估</td>
+                                    <td>2018-03-09~2018-09-09</td>
+                                    <td>￥580</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="layui-colla-item">
+                    <div class="layui-colla-title">
+                        <i class="fa fa-plus-circle"></i>
+                        <i class="fa fa-minus-circle"></i>
+                        <span>提交时间：<span class="time">2018-09-08 12:09:22</span></span>
+                        <span>订单号：<span class="number">876787987789</span></span>
+                        <span>提交人：<span class="name">张三</span></span>
+                        <span>总金额：<span class="money">￥28800.00</span></span>
+                    </div>
+                    <i class="fa fa-trash-o delete"></i>
+                    <div class="layui-colla-content layui-show">
+                        <table class="buyOrder">
+                            <thead>
+                                <tr>
+                                    <th>购买模块</th>
+                                    <th>购买周期</th>
+                                    <th>单价</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>可视化态势态势感知</td>
+                                    <td>2018-03-09~2018-09-09</td>
+                                    <td>￥1080</td>
+                                </tr>
+                                <tr>
+                                    <td>云等保检测自评估</td>
+                                    <td>2018-03-09~2018-09-09</td>
+                                    <td>￥580</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id='changeId' style='width:350px;display: none;' >
+        <div style='width:320px;margin-left: 3%;margin-bottom:10px;margin-top:10px;'>
+            <p>请输入旧密码</p>
+            <input class='layui-input' id='oldPassword' type='password' name='oldPassword' value=''/>
+            <span id='oldInfo' style='color:red;'></span>
+        </div>
+        <div style='width:320px;margin-left: 3%;margin-bottom:10px;'>
+            <p>请输入新密码</p>
+            <input class='layui-input' id='newPassword' maxlength='12' minlength='6' type='password' name='newPassword' value=''/>
+            <span id='newPasswordInfo' style='color:red;'></span>
+        </div>
+        <div style='width:320px;margin-left: 3%;margin-bottom:10px;'>
+            <p>请再次输入新密码</p>
+            <input class='layui-input' id='secondPassword' maxlength='12' minlength='6' type='password' name='secondPassword' value=''/>
+            <span id='rePassword' style='color:red;'></span>
+        </div>
+    </div>
+    <script type="text/javascript" src="plugins/layui/layui.all.js"></script>
+</body>
+</html>

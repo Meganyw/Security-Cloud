@@ -1,0 +1,685 @@
+.layui-layout-admin .layui-header{
+    width:100%;
+    position:fixed;
+    top:0;
+}
+body{
+    background:#fbfbfb;
+}
+.container{
+    padding:10px;
+    background: #fff;
+    .layui-search{
+        padding: 15px 10px;
+        border: 1px solid #ddd;
+        background: #f7f7f7;
+        .layui-form-item {
+            margin-bottom: 0;
+            clear: both;
+        }
+    }
+    .orderInfo{
+        margin-top:10px;
+    }
+    .editOrder{
+        border:1px solid #ddd;
+        width:100%;
+        text-align:center;
+        margin-top:10px;
+        clear:both;
+        tr{
+            border-bottom: 1px solid #fcfcfc;
+            td{
+                padding: 15px 5px;
+                background: #bed8dd;
+                input{
+                    width:60px;
+                    margin:0 10px;
+                    height: 24px;
+                    padding: 0 5px;
+                    border:0;
+                    text-align: right;
+                }
+            }
+            td:first-child{
+                background:#6a90aa;
+                color: #fff;
+                font-weight: bold;
+            }
+        }
+    }
+    .layui-btn-save{
+        background:#2eba55;
+    }
+}
+.layui-layout-left{
+    position: absolute;
+    left: 0px !important;
+    .layui-nav-bar{
+        display: none;
+    }
+}
+.orderView{
+    margin-top:60px;
+    .order{
+        margin-top:10px;
+        .fa-plus-circle,.fa-minus-circle{
+            position: absolute;
+            left: 15px;
+            top: 12px;
+            font-size: 16px;
+            color: #2c93fd;
+        }
+        .delete{
+            position: absolute;
+            right: 25px;
+            top: 7px;
+            color: #cf0303;
+            font-size: 24px;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+        }
+        .time,.money,.name,.number{
+            margin-right:50px;
+            color:#1a1b24;
+            font-weight: bold;
+            font-size:15px;
+        }
+        .time{
+            color:#086bfe;
+        }
+        .money{
+            color:#f40;
+        }
+        .buyOrder{
+            width:100%;
+            border: 1px solid #CADEFF;
+            tr{
+                td,th{
+                    border-bottom: 1px solid #CADEFF;
+                    padding:10px;
+                    text-align:center;
+                }
+                th{
+                    background:#f8f8f8;
+                }
+            }
+            tr:hover{
+                background:#f4f7fd;
+            }
+        }
+        .layui-colla-item{
+            position: relative;
+            box-shadow: 2px 2px 5px #ddd;
+        }
+        .layui-colla-content{
+            border-color:#fff;
+            padding: 0px 15px 10px 15px;
+        }
+        .withoutOrder{
+            padding: 50px 0;
+            border: 1px solid #ddd;
+            p{
+                text-align: center;
+                font-size: 18px;
+                color: #f40;
+                font-weight: bold;
+            }
+        }
+    }
+    .layui-form-select .layui-input{
+        border:0;
+    }
+    .layui-colla-icon{
+        display:none;
+    }
+    .layui-colla-title{
+        background:#e2f2ff;
+        margin-bottom:10px;
+        padding-left: 60px;
+        border-top: 3px solid #a7cbff;
+    }
+    .selectSearch{
+        padding: 15px;
+        background:#eee;
+        .layui-form-item{
+            margin-bottom:0px;
+        }
+
+    }
+}
+
+/* 添加购物车样式 */
+.containerBg{
+    width:100%;
+    background: url(images/cart.jpg) no-repeat;
+    background-size: 100% 100%;
+    position: fixed;
+    top:0;
+    bottom: 0;
+    overflow-y: auto;
+    .moduleCart{
+        padding-bottom: 37px;
+        .moduleTop{
+            padding-top:100px;
+            overflow: hidden;
+            ul{
+                width:1286px;
+                margin:0 auto;
+                li{
+                    width:280px;
+                    float: left;
+                    margin-left:55px;
+                    margin-bottom:45px;
+                    .moduleBg{
+                        background:url('images/moduleTopBg.png') no-repeat;
+                        width:100%;
+                        height:108px;
+                        line-height:108px;
+                        color:#fff;
+                        font-size:16px;
+                        padding:0 30px;
+                        box-sizing: border-box;
+                        p{
+                            position:relative;
+                            padding-left:40px;
+                        }
+                        .icon{
+                            width:32px;
+                            height:19px;
+                            position: absolute;
+                            left: 0;
+                            top: 44px;
+                        }
+                        .icon1{
+                            background:url('images/icon1.png') no-repeat;
+                        }
+                        .icon2{
+                            background:url('images/icon2.png') no-repeat;
+                        }
+                        .icon3{
+                            background:url('images/icon3.png') no-repeat;
+                        }
+                        .icon4{
+                            background:url('images/icon4.png') no-repeat;
+                        }
+
+                    }
+
+                }
+                li:first-child{
+                    margin-left: 0;
+                }
+            }
+        }
+        .moduleBottom{
+            overflow: hidden;
+            ul{
+                width:1286px;
+                margin:0 auto;
+                li{
+                    width:615px;
+                    margin-left:55px;
+                    float: left;
+                    .moduleBg{
+                        background:url('images/moduleBottomBg.png') no-repeat;
+                        width:100%;
+                        height:127px;
+                        line-height:127px;
+                        color:#fff;
+                        font-size:32px;
+                        padding:0 30px;
+                        box-sizing: border-box;
+                        p{
+                            position:relative;
+                            padding-left:70px;
+                        }
+                        .icon{
+                            width:68px;
+                            height:41px;
+                            position: absolute;
+                            left: 0;
+                            top: 44px;
+                        }
+                        .icon5{
+                            background:url('images/icon5.png') no-repeat;
+                        }
+                        .icon6{
+                            background:url('images/icon6.png') no-repeat;
+                        }
+                    }
+                    .moduleUnit{
+                        background:#fff;
+                        padding:20px 30px 10px 30px;
+                        overflow:hidden;
+                        height: 130px;
+                        label{
+                            color:#999999;
+                            width:20%;
+                        }
+                        input{
+                            width:80%;
+                            padding:5px 10px;
+                            box-sizing:border-box;
+                            margin: 10px 0;
+                        }
+                        .view{
+                            float:right;
+                        }
+                        .webIP{
+                            height:100px;
+                            line-height:100px;
+                        }
+                    }
+                    .moduleMoney{
+                        border-bottom-right-radius: 10px;
+                        border-bottom-left-radius: 10px;
+                        overflow:hidden;
+                        p{
+                            float:left;
+                        }
+                        .addToCart{
+                            float:right;
+                        }
+                    }
+                }
+                li:first-child{
+                    margin-left:0;
+                }
+            }
+        }
+        .button{
+            float:right;
+            .add,.addmore{
+                background:#6ba9b8;
+            }
+        }
+        .moduleTime{
+            background:#fff;
+            padding:20px 30px 30px 30px;
+            box-sizing: border-box;
+            box-sizing: border-box;
+            label{
+                color:#999999;
+            }
+            select{
+                height:32px;
+                width:140px;
+                margin-left:30px;
+                border:1px solid #b7b7b7;
+                border-radius: 3px;
+            }
+        }
+        .lineBg{
+            background:#fff;
+            .line{
+                height:1px;
+                background:#b7b7b7;
+                margin:0 30px;
+            }
+        }
+        .moduleMoney{
+            background:#fff;
+            padding:20px 30px 30px 30px;
+            p{
+                color:#3f5e53;
+                font-size:16px;
+                margin-bottom:20px;
+                font-weight:bold;
+                span{
+                    color:#a7a7a7;
+                    text-decoration: line-through;
+                    font-size:12px;
+                }
+            }
+            button{
+                background:#99ccc7;
+                border:1px solid #267488;
+            }
+        }
+
+    }
+}
+.batchAdd{
+    padding:10px;
+    display:none;
+    input{
+        width:100%;
+        border:1px solid #ddd;
+        padding:10px;
+        box-sizing:border-box;
+    }
+    .prompt{
+        color:red;
+        padding:10px;
+        a{
+            text-decoration:underline;
+            color:#007bf0;
+        }
+    }
+    li{
+        padding:10px 20px;
+        border-bottom:1px solid #f2f2f2;
+    }
+}
+.cart{
+    width: 100px;
+    height: 100px;
+    background: url(images/cart.png) no-repeat;
+    background-size: 100% 100%;
+    position: fixed;
+    bottom: 38px;
+    right: 24px;
+}
+
+/* 安全云服务大厅样式 */
+.service{
+    width:100%;
+    background:url('images/serivceBg.png') no-repeat;
+    background-size:100% 100%;
+    padding-top:70px;
+    box-sizing:border-box;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+
+    .title{
+        font-size:38px;
+        color: #21f0f2;
+        text-align:center;
+        font-weight:bold;
+        padding:10px;
+    }
+    .service_container{
+        margin:0 auto;
+        width:1100px;
+        overflow:hidden;
+        .module{
+            width:396px;
+            height:97px;
+            cursor:pointer;
+        }
+        .fl{
+            float:left;
+        }
+        .fr{
+            float: right;
+        }
+        .top{
+            margin:170px auto 100px;
+            overflow: hidden;
+            .topLeft{
+                background:url('images/service1.png') no-repeat;
+            }
+            .topRight{
+                background:url('images/service2.png') no-repeat;
+            }
+        }
+        .center{
+            .middle{
+                width:424px;
+                margin: 0 auto;
+                background:url('images/service5_active.png') no-repeat;
+            }
+        }
+        .bottom{
+            overflow: hidden;
+            margin:100px auto 0;
+            .bottomLeft{
+                background:url('images/service3.png') no-repeat;
+            }
+            .bottomRight{
+                background:url('images/service4.png') no-repeat;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1366px){
+    .top{
+        margin:60px auto !important;
+    }
+    .bottom{
+        margin:50px auto 0 !important;
+    }
+    .indexUser{
+        padding: 0 !important;
+        .indexContent{
+            .titleBg{
+                width: 220px;
+                height: 67px;
+                background-size: 100% 100%;
+            }
+            .modules{
+                width: 730px;
+                li{
+                    width: 226px;
+                    height: 234px;
+                }
+            }
+            .modules:last-child{
+                margin-bottom:0;
+            }
+        }
+    }
+}
+
+/* 合同附件和下载购物清单 */
+.contract{
+    margin-top:70px;
+    background:#fff;
+    .buyOrder{
+        tr{
+            td,th{
+                border: 1px solid #CADEFF;
+            }
+        }
+    }
+    .fa.deleteList{
+        color: #cf0303;
+        font-size: 24px;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        cursor:pointer;
+    }
+    .fa.fa-download{
+        color: #59a4fa;
+        font-size: 24px;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        cursor:pointer;
+    }
+    .uploadButton{
+        margin: 10px 0px;
+        .file{
+            padding: 10px;
+            box-sizing:border-box;
+            background:#eee;
+        }
+    }
+}
+
+/* 用户首页样式 */
+.indexUser{
+    background: url(images/indexBg.png) center center;
+    background-size: cover;
+    width: 100%;
+    padding: 36px 0;
+    margin-top: 60px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    overflow: auto;
+    .titleBg{
+        background:url('images/index_title.png') no-repeat;
+        width:393px;
+        height:128px;
+        margin:0px auto;
+    }
+    .indexContent{
+        ul{
+            overflow:hidden;
+            margin:30px auto;
+            width:934px;
+            li{
+                width:294px;
+                height:312px;
+                float: left;
+                margin-left:26px;
+                cursor:pointer;
+                position:relative;
+                text-align: center;
+                button{
+                    width: 100px;
+                    height: 36px;
+                    background: #2bfff1d4;
+                    margin: 20px auto;
+                    text-align: center;
+                    color: #fff;
+                    border: 0;
+                    cursor:pointer;
+                    border-radius:2px;
+                }
+                :hover{
+                    background:#f40;
+                }
+            }
+            .module1{
+                background:url('images/indexModule1.png') no-repeat;
+                background-size: 100% 100%;
+            }
+            .module1.default{
+                background:url('images/indexDefault1.png') no-repeat;
+                background-size: 100% 100%;
+            }
+            .module2{
+                background:url('images/indexModule2.png') no-repeat;
+                background-size: 100% 100%;
+            }
+            .module2.default{
+                background:url('images/indexDefault2.png') no-repeat;
+                background-size: 100% 100%;
+            }
+            .module3{
+                background:url('images/indexModule3.png') no-repeat;
+                background-size: 100% 100%;
+            }
+            .module3.default{
+                background:url('images/indexDefault3.png') no-repeat;
+                background-size: 100% 100%;
+            }
+            .module4{
+                background:url('images/indexModule4.png') no-repeat;
+                background-size: 100% 100%;
+            }
+            .module4.default{
+                background:url('images/indexDefault4.png') no-repeat;
+                background-size: 100% 100%;
+            }
+            .module5{
+                background:url('images/indexModule5.png') no-repeat;
+                background-size: 100% 100%;
+            }
+            .module5.default{
+                background:url('images/indexDefault5.png') no-repeat;
+                background-size: 100% 100%;
+            }
+            .module6{
+                background:url('images/indexModule6.png') no-repeat;
+                background-size: 100% 100%;
+            }
+            .module6.default{
+                background:url('images/indexDefault6.png') no-repeat;
+                background-size: 100% 100%;
+            }
+            li:first-child{
+                margin-left:0;
+            }
+        }
+    }
+}
+
+/* 购物车页面 */
+.shoppingCart{
+    margin-top:60px;
+    padding-bottom: 60px;
+    .layui-colla-title{
+        height:60px;
+        line-height:60px;
+    }
+    .order{
+        .fa-plus-circle, .fa-minus-circle{
+            top: 18px;
+            font-size: 22px;
+        }
+        .delete{
+            top:14px;
+            cursor:pointer;
+        }
+        .number{
+            width:100px;
+            height:30px;
+        }
+        .deleteTr{
+            font-size:22px;
+            color:#cf0303;
+            cursor:pointer;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+        }
+        .edit{
+            font-size: 22px;
+            color: #0018ff;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            cursor:pointer;
+        }
+        tr{
+            td{
+                word-break: break-word;
+                width: 45%;
+            }
+            td:first-child{
+                width:30%;
+            }
+        }
+    }
+    .functionButton{
+        height:60px;
+        line-height:60px;
+        background:#d7d7d7;
+        width:100%;
+        position: fixed;
+        bottom:0;
+        left:0;
+        right:0;
+        padding:0 10px;
+        .button{
+            text-align: center;
+        }
+        .buyModule{
+            background:#f40;
+        }
+        .submitList{
+
+        }
+    }
+
+}
+
+.operationManage{
+    margin-top:60px;
+    .button{
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+    }
+}

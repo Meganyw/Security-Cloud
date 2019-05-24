@@ -1,0 +1,202 @@
+/*
+* @Author: Marte
+* @Date:   2017-05-04 15:40:48
+* @Last Modified by:   Marte
+* @Last Modified time: 2018-11-30 15:07:18
+*/
+.container{
+    background:url(images/bg.jpg)  no-repeat;
+    background-size: 100% 100%;
+    width:100%;
+    height:100%;
+    position: fixed;
+    top:0px;
+    left: 0px;
+    bottom:0px;
+    right:0px;
+}
+.login{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -170px;
+    margin-left: -400px;
+}
+.logo{
+    background:url(images/logo.png) no-repeat;
+    width:167px;
+    height:112px;
+    margin:10% auto 0px;
+}
+.title{
+    text-align: center;
+    font-size: 52px;
+    color:#fff;
+    margin-top:20px;
+    font-family:'宋体';
+    font-weight:bold;
+    text-shadow: 1px 1px 5px #fff;
+}
+.title2{
+    font-size:24px;
+    color:cyan;
+    font-family: '楷体';
+    margin-top:5%;
+    text-align:center;
+    font-weight: bold;
+}
+.inputs{
+    background:url(images/input_bg.png) no-repeat;
+    width:800px;
+    height:100px;
+    margin:30px auto 0px;
+    position:relative;
+    background-size:100% 100%;
+}
+.inputs .editInput{
+    width:160px;
+    height:32px;
+    background:#fff;
+    padding-left: 5px;
+    margin-top:30px;
+    float:left;
+    margin-right:10px;
+    box-shadow: 2px 2px 1px #5d5d5d;
+}
+.inputs .checkImg{
+    width:80px;
+    height:32px;
+    margin-top:30px;
+    float:left;
+    margin-right:10px;
+    background:#fff;
+}
+.inputs input.username{
+    margin-left:100px;
+}
+.inputs .submitButton{
+    width:80px;
+    height:32px;
+    position:absolute;
+    text-align:center;
+    line-height: 32px;
+    top:30px;
+    float:left;
+    background: #2289ff;
+    color: #fff;
+}
+.inputs .submitButton:hover{
+    background:#eee;
+    color:#333;
+}
+.beizhu{
+    margin-top:8%;
+    font-size:1.6em;
+}
+.words{
+    color:#fff;
+    text-align:center;
+}
+.eng{
+    font-size:0.75em;
+}
+.registeDiv,.loginDiv{
+    margin: 30px auto;
+    width: 100%;
+    text-align: center;
+    color: #079dff;
+    font-size: 14px;
+}
+.loginDiv{
+    color:#333;
+}
+.registeDiv .registeButton,.loginDiv .loginButton{
+    text-decoration: underline;
+    color:#fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+.loginDiv .loginButton{
+    color:#079dff;
+}
+.registe{
+    width:600px;
+    margin:20px auto 0;
+    background:#fff;
+    padding:20px 60px;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -300px;
+    margin-top: -324px;
+}
+.registe .title{
+    color:#333;
+    font-size:24px;
+    margin-top:10px;
+    float:left;
+    font-family: '黑体';
+    font-weight: normal;
+    margin-top:0;
+}
+.registe .underlineInput{
+    width:100%;
+    border-bottom: 1px solid #b8b8b8;
+    padding: 15px 20px 10px 20px;
+    overflow: hidden;
+}
+.registe .underlineInput .name{
+    width: 16%;
+    color: #333;
+    font-size: 14px;
+    float:left;
+}
+.registe .underlineInput input{
+    width:84%;
+    float:left;
+    height: 22px;
+    line-height: 22px;
+}
+.province,.city{
+    width:50%;
+    float: left;
+    padding-right: 20px;
+}
+.province span,.city span{
+    font-size:14px;
+    color:#a0a0a0;
+}
+.province .select,.city .select{
+    border:0;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    -o-appearance:none;
+    -ms-appearance:none;
+    font-size:14px;
+    width: 67%;
+}
+input::-webkit-input-placeholder {
+    color: #a0a0a0;
+    font-size:14px;
+}
+.registeSubmit{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background: #2e89f9;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 3px;
+    margin-top: 30px;
+}
+.passwordInput{
+    position:relative;
+}
+.passwordInput>i{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    color: #058cf7;
+    font-size: 20px;
+}
